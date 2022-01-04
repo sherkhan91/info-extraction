@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <center><h1>Welcome to x-cago!</h1></center>
+        <div style="overflow-x:auto;">
+        <table border="1" style="border: 1px solid black;">
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    pubcode_url
+                </th>
+                <th>
+                    Publisher
+                </th>
+                <th>
+                    Feed time
+                </th>
+                <th>
+                    Contractor
+                </th>
+            </tr>
+            {% for pub in publications%}
+            <tr>
+                <td>
+                    {{pub.name}}
+                </td>
+                <td>
+                   {{pub.pubcode}}
+                </td>
+                <td>
+                    {{pub.publisher}}
+                </td>
+                <td>
+                    {{pub.feed_time}}
+                </td>
+                <td>
+                    {{pub.contractor}}
+                </td>
+            </tr>
+           {% endfor %}
+            
+        </table>
+    </div>
+    </body>
+</html>
